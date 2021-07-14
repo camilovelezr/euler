@@ -30,7 +30,6 @@ end
 
 maximum(values(f))
 
-getkey(f, 16)
 
 for (k, v) in f
     if v == 16
