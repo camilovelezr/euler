@@ -17,8 +17,7 @@ function main()
 
     t = Iterators.takewhile(x -> x<=maximum(scores), Iterators.map( x-> trianglenumber(x), Iterators.countfrom(1)))
 
-    twords = Iterators.filter(x -> x in t, scores)
-    return length(collect(twords))
+    return Iterators.count(x -> x in t, scores)
 end
 
-#Running time about 3 s
+#Running time about 2.9 s
