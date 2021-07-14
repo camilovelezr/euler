@@ -20,4 +20,4 @@ function main()
     return Iterators.count(x -> x in t, scores)
 end
 
-#Running time about 2.9 s
+#Running time about 2.9 s in msi. 4.2 s in M1
