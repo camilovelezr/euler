@@ -17,4 +17,9 @@ i7
 @btime pass()
     14.831 μs (413 allocations: 45.17 KiB)
 512
+
+M1
+@btime pass()
+    23.250 μs (413 allocations: 45.17 KiB)
+512 
 """
