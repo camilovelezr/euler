@@ -46,4 +46,6 @@ function main()
     return sum(num)
 end
 
+println(main())
+@btime main()
 #Running time 2.5 s msi.
