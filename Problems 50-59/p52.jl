@@ -10,7 +10,7 @@ nl = Iterators.countfrom(10^2)
 function main(x)
     nums = [x, 2x, 3x, 4x, 5x, 6x]
     ds = Iterators.map(x -> Set(digits(x)), nums)
-    s = Iterators.map(t -> t==Set(digits(x)), ds)
+    s = Iterators.map(t -> t == Set(digits(x)), ds)
     return all(s)
 end
 
@@ -20,4 +20,8 @@ end
 
 """
 M1: 137.813 ms
+M1 Pro:
+julia> @btime find()
+  87.814 ms (2998675 allocations: 290.59 MiB)
+142857
 """
