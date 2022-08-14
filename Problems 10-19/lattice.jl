@@ -4,16 +4,16 @@ using LinearAlgebra
 m1 = transpose(reshape(1:(21^2), (21, 21)))
 
 nl = 1:441
-ps = Iterators.filter(x -> first(x)==1, permutations(nl, 40))
-ps = Iterators.filter(x -> last(x)==441, ps)
+ps = Iterators.filter(x -> first(x) == 1, permutations(nl, 40))
+ps = Iterators.filter(x -> last(x) == 441, ps)
 _h(t::Tuple) = ((abs(-(t...)) == 1) | (abs(-(t...)) == 21)) ? true : false
-ps = Iterators.filter(x -> (x[2]==2) | (x[2]==22), ps)
+ps = Iterators.filter(x -> (x[2] == 2) | (x[2] == 22), ps)
 divisible(x::Int, y::Int) = isinteger(y / x)
 
 function _d(itr)::Bool
     for (k, v) in Iterators.enumerate(itr)
         if divisible(23, v)
-            (itr[k+1] == v+1) && return false
+            (itr[k+1] == v + 1) && return false
         end
     end
     return true
@@ -37,9 +37,7 @@ ps1 = Iterators.filter(_d, ps)
 
 # Iterators.peel(Iterators.filter(f1, ps))
 function f2(itr)
-    l = copy()
     i = 3
     x = 3
     y = 23
-    while i <= 40
-   
+end
